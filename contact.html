@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Web Development Tech Challenge</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="nav">
+      <a href="index.html">
+        <img src="assets/Logo.png" alt="Logo" class="logo" />
+      </a>
+      <div class="items">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="royalFamily.html">Royal Family</a>
+          </li>
+          <li class="nav-item">
+            <a href="royalAssets.html">Royal Assets</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section id="contact">
+      <h2>Contact the Royal Family</h2>
+      <form id="contactForm">
+        <div class="form-nom-email">
+          <div class="form-column">
+            <label for="name">Name</label>
+            <input type="text" id="name" value="John" />
+          </div>
+          <div class="form-column">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value="example@seamail.com"
+            />
+          </div>
+        </div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message"></textarea>
+        <input type="submit" value="submit" class="cta" />
+      </form>
+    </section>
+
+    <script>
+      const message =
+        "Thank you for submitting your request. The Royal Family will respond shortly.";
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          alert(message);
+        });
+    </script>
+  </body>
+</html>
